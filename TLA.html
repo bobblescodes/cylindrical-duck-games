@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cylindrical Duck</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/Logo/cylindircal-duck-logo.ico">
+</head>
+<body>
+    <header>
+        <img src="Logo/cylindircal-duck-logo.png" alt="Logo" class="logo">
+        <h1>THE LAST ANDEAN FEATURES AND UPDATES</h1>
+        <nav>
+             <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="games.html">GAMES</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section2>
+        <div class="toggle-button">
+            <button id="featuresBtn" class="active">Current Features</button>
+            <button id="updatesBtn">Under Development</button>
+        </div>
+        
+        <div class="cards-container">
+            <div id="features" class="cards active">
+                <h2 class="TLA-header">Features</h2>
+                <div class="card">
+                    <img src="hero-image.jpeg" alt="Image 1">
+                    <div class="card-content">
+                        <h2 class="card-title">The Map</h2>
+                        <p class="card-text">The map is partically inspired by the Andes mountains with a large central mountain, and many mmore off in the distance. The player is able to build towers anywhere in the grassy area (and there maybe be some water-based towers as well). They player is free to structure their tower defenses however they see fit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="guanaco.jpeg" alt="Image 2">
+                    <div class="card-content">
+                        <h2 class="card-title">Companion Feature</h2>
+                        <p class="card-text">At the start of the game, the player has a choice of their companion. Pictured to the left is a guanaco, which is a close relative to the llama and lives in the Andes. Each companion will provide a different special ability or stat boost. The player can name their companion and they will follow the player around.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="tower-build.jpeg" alt="Image 3">
+                    <div class="card-content">
+                        <h2 class="card-title">Tower Building</h2>
+                        <p class="card-text">So far there are 3 towers types. A simple attackig tower, a bank tower which prdouces gold, and a healing tower for the player. The healing tower will only work when the player is in range and enemies are out of range. The tower building mechanic is set on a grid with each tower taking up a 9 sqaure chunk.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="player-up.jpeg" alt="Image 4">
+                    <div class="card-content">
+                        <h2 class="card-title">Player Upgrades</h2>
+                        <p class="card-text">The player can upgrade 4 main categories (as of now - this may develop into more attributes): health, damage, attack speed, and running speed. Each upgrade costs gold, and gets progressively more expensive as you upgrade. The menu on the left is not finalized (I still need to display the cost somewhere).</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="logo card.png" alt="Image 5">
+                    <div class="card-content">
+                        <h2 class="card-title">Tech Stack</h2>
+                        <p class="card-text">I am creating TLA on the game engine Godot and using both C# and GDScript to handle the coding. I am doing all the artwork in Asesprite, and creating the sound effects and music in GarageBand. Luckily these tools allow me to keep my develop as a zero-cost project (except for the $20 Asesprite purchase).</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="update1.jpeg" alt="Update 1">
+                    <div class="card-content">
+                        <h2 class="card-title">Sophisticated Enemies</h2>
+                        <p class="card-text">Enemies are smart enough to surround the player and avoid towers. I have also added in randomization to the enemy decisions. Any given enemy will randomly select to attack towers, the player, or the home base.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="updates" class="cards">
+                <h2 class="TLA-header">Under Development</h2>
+                <div class="card">
+                    <img src="update2.jpeg" alt="Update 2">
+                    <div class="card-content">
+                        <h2 class="card-title">Home Base</h2>
+                        <p class="card-text">I've started the artwork for a 'home base' of sorts which enemies will try to destory. The base is modeled after some old Inca ruins. It will be up to the player on how they want to protect it. If the base is destroyed then the game is over.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="update3.jpeg" alt="Update 3">
+                    <div class="card-content">
+                        <h2 class="card-title">More Tower Types</h2>
+                        <p class="card-text">I'm developing multiple more tower types. Some of which are towers which do high close-range damage, towers which slow enemies down and redirect them, and towers which can repair or boost other local towers. As well as towers which do better against specific enemy tpyes.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="update4.jpeg" alt="Update 4">
+                    <div class="card-content">
+                        <h2 class="card-title">More Enemy Types </h2>
+                        <p class="card-text">I am working on a bunch more enemy types. One exmaple is a water-based enemy which is a stationary ship which does heavy damage to the home base (and when the player is in range) but can only be taken out by towers. Another example is an enemy which will deactivate towers if they get within range. And many more to come.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section2>
+    
+    <footer>
+        <p>&copy; 2024 Cylindrical Duck Games</p>
+    </footer>
+
+    <script>
+        document.getElementById('featuresBtn').addEventListener('click', function() {
+            document.getElementById('features').classList.add('active');
+            document.getElementById('updates').classList.remove('active');
+            this.classList.add('active');
+            document.getElementById('updatesBtn').classList.remove('active');
+        });
+
+        document.getElementById('updatesBtn').addEventListener('click', function() {
+            document.getElementById('features').classList.remove('active');
+            document.getElementById('updates').classList.add('active');
+            this.classList.add('active');
+            document.getElementById('featuresBtn').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
