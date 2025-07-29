@@ -130,6 +130,20 @@ nav ul li a:hover::before {
     font-size: 1.2em; /* Increased font size */
 }
 
+.home-steam-button {
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    padding: 10px 45px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-decoration: none;
+    margin: 30px 0px;
+    background: linear-gradient(lightgreen, #367588);
+    color: black;
+    font-size: 1.2em; /* Increased font size */
+}
+
 .home-games-button:hover {
     background: linear-gradient(lightblue, lightgreen);
     color: blueviolet;
